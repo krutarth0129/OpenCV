@@ -1,4 +1,3 @@
-# face_detection_from_bag.py
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
@@ -11,7 +10,7 @@ class FaceDetectionFromBag(Node):
         super().__init__('face_detection_from_bag')
         self.subscription = self.create_subscription(
             Image,
-            '/camera/color/image_raw',  # This should match the topic name in your bag file
+            '/camera/color/image_raw', 
             self.listener_callback,
             10
         )
